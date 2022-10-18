@@ -447,10 +447,88 @@
   }
 }
 @media (min-width: 1280px) {
+  #state-3,
+  #state-4,
+  #state-5 {
+    #game-container {
+      width: 20vh;
+      height: 20vh;
+      top: calc(50% - 10vh);
+    }
+    &.app.modified {
+      #game-container {
+        width: 16vh;
+        height: 16vh;
+        top: calc(50% - 8vh);
+      }
+    }
+  }
   #game-container {
     #player-chooses {
       width: auto;
       height: 35%;
+      .item {
+        width: 20vh;
+        height: 20vh;
+        div {
+          width: 16vh;
+          height: 16vh;
+          img {
+            width: 10vh;
+            height: 10vh;
+          }
+        }
+      }
+    }
+  }
+  #ai-choice {
+    width: 20vh;
+    height: 20vh;
+    .item {
+      width: 20vh;
+      height: 20vh;
+      div {
+        width: 16vh;
+        height: 16vh;
+        img {
+          width: 10vh;
+          height: 10vh;
+        }
+      }
+    }
+  }
+  .app.modified {
+    #game-container {
+      #player-chooses {
+        .item {
+          width: 16vh;
+          height: 16vh;
+          div {
+            width: 13vh;
+            height: 13vh;
+            img {
+              width: 8vh;
+              height: 8vh;
+            }
+          }
+        }
+      }
+    }
+    #ai-choice {
+      width: 16vh;
+      height: 16vh;
+      .item {
+        width: 16vh;
+        height: 16vh;
+        div {
+          width: 13vh;
+          height: 13vh;
+          img {
+            width: 8vh;
+            height: 8vh;
+          }
+        }
+      }
     }
   }
 }
