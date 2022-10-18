@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap');
+@import './components/mainMenu/MainMenu.scss';
+@import './components/header/Header.scss';
+@import './components/mainGame/MainGame.scss';
+@import './components/footer/Footer.scss';
+@import './app.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+}
+img {
+  display: block;
+}

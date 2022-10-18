@@ -1,0 +1,83 @@
+@import '../../variables';
+
+#state-0,
+#state-1 {
+  #points-container {
+    left: -100vw;
+  }
+}
+#points-container {
+  display: flex;
+  width: 90vw;
+  top: 1rem;
+  transform: translateX(-50%);
+  left: 50%;
+  max-width: 1000px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 3px $Header-Outline;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 1s ease-in-out;
+  #points-img-container {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80px;
+    }
+  }
+  #score-container {
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #score {
+      color: $Score-Text;
+      font-size: 12px;
+    }
+    #points {
+      margin: -2px 0;
+      color: $Dark-Text;
+      font-weight: 700;
+      font-size: 36px;
+    }
+  }
+}
+.app.modified {
+  #points-container {
+    img {
+      width: 70px !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #points-container {
+    top: 2rem;
+    #points-img-container {
+      img {
+        width: 136px;
+      }
+    }
+    #score-container {
+      #score {
+        font-size: 18px;
+      }
+      #points {
+        font-size: 54px;
+      }
+    }
+  }
+  .app.modified {
+    #points-container {
+      img {
+        width: 100px !important;
+      }
+    }
+  }
+}
