@@ -100,10 +100,12 @@
 .app.modified #game-container #player-chooses {
   .item-0 {
     left: 80%;
+    transform: translate(-50%, +50%);
   }
   .item-1 {
     left: 95%;
     top: 40%;
+    transform: translate(-50%, -50%);
   }
   .item-2 {
     left: 50%;
