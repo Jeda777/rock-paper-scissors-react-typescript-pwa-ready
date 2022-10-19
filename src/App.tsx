@@ -12,7 +12,6 @@ const App = () => {
   useEffect(() => {
     const originalLocalPoints = Number(localStorage.getItem('originalpoints'))
     const modifiedLocalPoints = Number(localStorage.getItem('modifiedpoints'))
-    console.log(originalLocalPoints, modifiedLocalPoints)
     if (originalLocalPoints !== null) setOriginalPoints(originalLocalPoints)
     if (modifiedLocalPoints !== null) setModifiedPoints(modifiedLocalPoints)
     loaded = true
