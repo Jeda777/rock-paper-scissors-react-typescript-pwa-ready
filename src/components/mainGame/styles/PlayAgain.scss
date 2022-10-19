@@ -1,0 +1,57 @@
+@import '../../../variables';
+
+#state-0,
+#state-1,
+#state-2,
+#state-3,
+#state-4 {
+  #play-again {
+    bottom: -20vh;
+  }
+}
+#play-again {
+  position: absolute;
+  width: 70vw;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 1s ease-in-out;
+  p {
+    font-size: 40px;
+  }
+  button {
+    color: $Dark-Text;
+    font-size: 18px;
+    background: white;
+    border: none;
+    padding: 0.75rem 3rem;
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+@media (min-width: 768px) {
+  #play-again {
+    bottom: 20vh;
+    gap: 0.5rem;
+    p {
+      font-size: 40px;
+    }
+    button {
+      color: $Dark-Text;
+      font-size: 18px;
+      padding: 0.75rem 3rem;
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+}
