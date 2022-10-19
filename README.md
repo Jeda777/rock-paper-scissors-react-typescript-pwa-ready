@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://your-solution-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/rock-paper-scissors-with-bonus-animated-reacttypescript-and-scss-CIicsI1Kfd)
 - [Live site](https://gentle-torte-e5192a.netlify.app/)
 
 ## Built with
