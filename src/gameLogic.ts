@@ -35,4 +35,4 @@ const whoIsWinner = (PlayerChoise: number, AIChoice: number) => {
   }
 }
 
-export { getAIChoice, whoIsWinner }
+export { options, getAIChoice, whoIsWinner }

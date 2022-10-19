@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getAIChoice, whoIsWinner } from '../../gameLogic'
+import { options, getAIChoice, whoIsWinner } from '../../gameLogic'
 import { gameThings, bgPentagon, bgTraingle } from '../../assets/assets'
 
 type Props = {
@@ -61,7 +61,7 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
     <>
       <div id='game-container' className={`${gameState === 5 && winner === 'player' ? 'winner' : ''}`}>
         <div id='player-chooses'>
-          <img id='bg-img' src={isGameModified ? bgPentagon : bgTraingle} alt='' />
+          <img id='bg-img' src={isGameModified ? bgPentagon : bgTraingle} alt={isGameModified ? 'bgPentagon' : 'bgTraingle'} />
           {gameThings.map((i, index) => {
             if (!isGameModified) {
               if (index < 3) {
@@ -74,7 +74,7 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
                     }}
                   >
                     <div>
-                      <img src={i} />
+                      <img src={i} alt={options[index]} />
                     </div>
                   </div>
                 )
@@ -89,7 +89,7 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
                   }}
                 >
                   <div>
-                    <img src={i} />
+                    <img src={i} alt={options[index]} />
                   </div>
                 </div>
               )
@@ -104,7 +104,7 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
         ) : gameState === 5 ? (
           <div className={`item item-${AIChoice}`}>
             <div>
-              <img src={AIChoice !== undefined ? gameThings[AIChoice] : ''} />
+              <img src={AIChoice !== undefined ? gameThings[AIChoice] : ''} alt={AIChoice !== undefined ? options[AIChoice] : ''} />
             </div>
           </div>
         ) : (
