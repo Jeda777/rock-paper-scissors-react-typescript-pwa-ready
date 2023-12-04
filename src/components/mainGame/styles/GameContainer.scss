@@ -62,7 +62,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out, box-shadow 0s;
   #player-chooses {
     position: relative;
     aspect-ratio: 313/278;
