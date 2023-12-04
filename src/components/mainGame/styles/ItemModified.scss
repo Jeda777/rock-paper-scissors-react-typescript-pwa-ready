@@ -1,0 +1,57 @@
+@import '../../../variables';
+
+.item-3 {
+  background: linear-gradient($Lizard-Gradient);
+}
+.item-4 {
+  background: linear-gradient($Cyan);
+}
+
+.app.modified .item {
+  width: $Modified-Size-Default;
+  height: $Modified-Size-Default;
+  box-shadow: inset 0px calc($Modified-Size-Default / -25) 0px 0px rgb(0 0 0 / 0.3);
+  div {
+    width: calc(0.8 * $Modified-Size-Default);
+    height: calc(0.8 * $Modified-Size-Default);
+    box-shadow: inset 0px calc($Normal-Size-Default / 25) 0px 0px rgb(0 0 0 / 0.3);
+    img {
+      width: calc(0.5 * $Modified-Size-Default);
+      height: calc(0.5 * $Modified-Size-Default);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .app.modified .item {
+    width: $Modified-Size-Md;
+    height: $Modified-Size-Md;
+    box-shadow: inset 0px calc($Modified-Size-Md / -25) 0px 0px rgb(0 0 0 / 0.3);
+    div {
+      width: calc(0.8 * $Modified-Size-Md);
+      height: calc(0.8 * $Modified-Size-Md);
+      box-shadow: inset 0px calc($Modified-Size-Md / 25) 0px 0px rgb(0 0 0 / 0.3);
+      img {
+        width: calc(0.5 * $Modified-Size-Md);
+        height: calc(0.5 * $Modified-Size-Md);
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .app.modified .item {
+    width: $Modified-Size-L;
+    height: $Modified-Size-L;
+    box-shadow: inset 0px calc($Modified-Size-L / -25) 0px 0px rgb(0 0 0 / 0.3);
+    div {
+      width: calc(0.8 * $Modified-Size-L);
+      height: calc(0.8 * $Modified-Size-L);
+      box-shadow: inset 0px calc($Modified-Size-L / 25) 0px 0px rgb(0 0 0 / 0.3);
+      img {
+        width: calc(0.5 * $Modified-Size-L);
+        height: calc(0.5 * $Modified-Size-L);
+      }
+    }
+  }
+}

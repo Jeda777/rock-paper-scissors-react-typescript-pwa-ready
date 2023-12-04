@@ -3,6 +3,9 @@
 @import './styles/PlayAgain.scss';
 @import './styles/GameContainer.scss';
 @import './styles/Item.scss';
+@import './styles/AIChoiceModified.scss';
+@import './styles/GameContainerModified.scss';
+@import './styles/ItemModified.scss';
 
 .winner {
   box-shadow: 0 0 calc(0.5 * $Normal-Size-Default) 10px #fff;

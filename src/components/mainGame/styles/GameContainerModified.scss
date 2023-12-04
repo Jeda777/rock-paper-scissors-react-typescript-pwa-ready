@@ -1,0 +1,66 @@
+@import '../../../variables';
+
+#state-3,
+#state-4,
+#state-5 {
+  &.app.modified {
+    #game-container {
+      width: $Modified-Size-Default;
+      height: $Modified-Size-Default;
+      top: calc(50% - (0.5 * $Modified-Size-Default));
+    }
+  }
+}
+
+.app.modified #game-container #player-chooses {
+  .item-0 {
+    left: 80%;
+    transform: translate(-50%, +50%);
+  }
+  .item-1 {
+    left: 95%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+  .item-2 {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+  .item-3 {
+    left: 20%;
+    bottom: 0;
+    transform: translate(-50%, +50%);
+  }
+  .item-4 {
+    left: 5%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 768px) {
+  #state-3,
+  #state-4,
+  #state-5 {
+    &.app.modified {
+      #game-container {
+        width: $Modified-Size-Md;
+        height: $Modified-Size-Md;
+        top: calc(50% - (0.5 * $Modified-Size-Md));
+      }
+    }
+  }
+}
+@media (min-width: 1280px) {
+  #state-3,
+  #state-4,
+  #state-5 {
+    &.app.modified {
+      #game-container {
+        width: $Modified-Size-L;
+        height: $Modified-Size-L;
+        top: calc(50% - (0.5 * $Modified-Size-L));
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
     left: 75%;
   }
 }
+
 #ai-choice {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -25,31 +26,17 @@
     background: rgb(0 0 0 / 0.5);
   }
 }
-.app.modified #ai-choice {
-  width: $Modified-Size-Default;
-  height: $Modified-Size-Default;
-}
+
 @media (min-width: 768px) {
   #ai-choice {
     width: $Normal-Size-Md;
     height: $Normal-Size-Md;
   }
-  .app.modified {
-    #ai-choice {
-      width: $Modified-Size-Md;
-      height: $Modified-Size-Md;
-    }
-  }
 }
+
 @media (min-width: 1280px) {
   #ai-choice {
     width: $Normal-Size-L;
     height: $Normal-Size-L;
-  }
-  .app.modified {
-    #ai-choice {
-      width: $Modified-Size-L;
-      height: $Modified-Size-L;
-    }
   }
 }
