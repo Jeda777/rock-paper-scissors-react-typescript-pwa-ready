@@ -10,8 +10,7 @@ const Footer: React.FC<Props> = ({ setGameState, isGameModified }) => {
   const [rulesOpen, setRulesOpen] = useState(false)
 
   const returnToMenu = () => {
-    setGameState(1)
-    setTimeout(() => setGameState(0), 1000)
+    setGameState(0)
   }
 
   return (

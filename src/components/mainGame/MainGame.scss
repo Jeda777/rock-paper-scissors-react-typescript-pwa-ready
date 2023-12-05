@@ -1,32 +1,44 @@
 @import '../../variables';
 @import './styles/AIChoice.scss';
 @import './styles/PlayAgain.scss';
-@import './styles/GameContainer.scss';
+@import './styles/PlayerChooses.scss';
 @import './styles/Item.scss';
 @import './styles/AIChoiceModified.scss';
-@import './styles/GameContainerModified.scss';
+@import './styles/PlayerChoosesModified.scss';
 @import './styles/ItemModified.scss';
 
 .winner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  aspect-ratio: 1/1;
+  width: $Normal-Size-Default;
+  border-radius: 100%;
   box-shadow: 0 0 calc(0.5 * $Normal-Size-Default) 10px #fff;
   transition: box-shadow 0.1s ease-in-out !important;
 }
 .app.modified .winner {
+  width: $Modified-Size-Default;
   box-shadow: 0 0 calc(0.5 * $Modified-Size-Default) 10px #fff;
 }
 @media (min-width: 768px) {
   .winner {
+    width: $Normal-Size-Md;
     box-shadow: 0 0 calc(0.5 * $Normal-Size-Md) 10px #fff;
   }
   .app.modified .winner {
+    width: $Modified-Size-Md;
     box-shadow: 0 0 calc(0.5 * $Modified-Size-Md) 10px #fff;
   }
 }
 @media (min-width: 1280px) {
   .winner {
+    width: $Normal-Size-L;
     box-shadow: 0 0 calc(0.5 * $Normal-Size-L) 10px #fff;
   }
   .app.modified .winner {
+    width: $Modified-Size-L;
     box-shadow: 0 0 calc(0.5 * $Modified-Size-L) 10px #fff;
   }
 }

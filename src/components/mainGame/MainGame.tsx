@@ -28,10 +28,13 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
   }
 
   const reset = () => {
-    setPlayerChoice(undefined)
     setAIChoice(undefined)
     setWinner(undefined)
-    setGameState(2)
+    setGameState(3)
+    setTimeout(() => {
+      setGameState(2)
+      setPlayerChoice(undefined)
+    }, 1000)
   }
 
   useEffect(() => {
@@ -59,31 +62,16 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
 
   return (
     <>
-      <div id='game-container' className={`${gameState === 5 && winner === 'player' ? 'winner' : ''}`}>
-        <div id='player-chooses'>
-          <img id='bg-img' src={isGameModified ? bgPentagon : bgTraingle} alt={isGameModified ? 'bgPentagon' : 'bgTraingle'} />
-          {gameThings.map((i, index) => {
-            if (!isGameModified) {
-              if (index < 3) {
-                return (
-                  <div
-                    key={index}
-                    className={`item item-${index} ${index === playerChoice ? 'choosen' : ''} `}
-                    onClick={() => {
-                      playerChooseFunc(index)
-                    }}
-                  >
-                    <div>
-                      <img src={i} alt={options[index]} />
-                    </div>
-                  </div>
-                )
-              } else return
-            } else {
+      <div id='player-chooses'>
+        <div className={`${gameState === 5 && winner === 'player' ? 'winner' : ''}`}></div>
+        <img id='bg-img' src={isGameModified ? bgPentagon : bgTraingle} alt={isGameModified ? 'bgPentagon' : 'bgTraingle'} />
+        {gameThings.map((i, index) => {
+          if (!isGameModified) {
+            if (index < 3) {
               return (
                 <div
                   key={index}
-                  className={`item item-${index} ${index === playerChoice ? 'choosen' : ''}`}
+                  className={`item item-${index} ${index === playerChoice ? 'choosen' : ''} `}
                   onClick={() => {
                     playerChooseFunc(index)
                   }}
@@ -93,9 +81,23 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
                   </div>
                 </div>
               )
-            }
-          })}
-        </div>
+            } else return
+          } else {
+            return (
+              <div
+                key={index}
+                className={`item item-${index} ${index === playerChoice ? 'choosen' : ''}`}
+                onClick={() => {
+                  playerChooseFunc(index)
+                }}
+              >
+                <div>
+                  <img src={i} alt={options[index]} />
+                </div>
+              </div>
+            )
+          }
+        })}
       </div>
 
       <div id='ai-choice' className={`${gameState === 5 && winner === 'ai' ? 'winner' : ''}`}>

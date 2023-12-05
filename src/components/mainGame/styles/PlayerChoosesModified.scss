@@ -1,0 +1,84 @@
+@import '../../../variables';
+
+#state-3,
+#state-4,
+#state-5 {
+  &.app.modified {
+    #player-chooses {
+      width: $Modified-Size-Default;
+    }
+  }
+}
+
+.app.modified #player-chooses {
+  aspect-ratio: 329/313;
+  .item-0 {
+    left: calc(66% + 0.5 * $Modified-Size-Default);
+    top: calc(100% - 0.2 * $Modified-Size-Default);
+  }
+  .item-1 {
+    left: 95%;
+    top: 40%;
+  }
+  .item-2 {
+    left: 50%;
+    top: 5%;
+  }
+  .item-3 {
+    left: calc(33% - 0.5 * $Modified-Size-Default);
+    top: calc(100% - 0.2 * $Modified-Size-Default);
+  }
+  .item-4 {
+    left: 5%;
+    top: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  #state-3,
+  #state-4,
+  #state-5 {
+    &.app.modified {
+      #player-chooses {
+        width: $Modified-Size-Md;
+      }
+    }
+  }
+
+  .app.modified #player-chooses {
+    .item-0 {
+      left: calc(66% + 0.5 * $Modified-Size-Md);
+      top: calc(100% - 0.2 * $Modified-Size-Md);
+    }
+    .item-3 {
+      left: calc(33% - 0.5 * $Modified-Size-Md);
+      top: calc(100% - 0.2 * $Modified-Size-Md);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  #state-3,
+  #state-4,
+  #state-5 {
+    &.app.modified {
+      #player-chooses {
+        height: $Modified-Size-L;
+        width: auto;
+      }
+    }
+  }
+
+  .app.modified #player-chooses {
+    height: 47.5vh;
+    top: 52.5%;
+    .item-0 {
+      left: calc(66% + 0.5 * $Modified-Size-L);
+      top: calc(100% - 0.2 * $Modified-Size-L);
+    }
+    .item-3 {
+      left: calc(33% - 0.5 * $Modified-Size-L);
+      top: calc(100% - 0.2 * $Modified-Size-L);
+    }
+  }
+}
