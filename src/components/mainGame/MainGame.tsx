@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { options, getAIChoice, whoIsWinner } from '../../gameLogic'
-import { gameThings, bgPentagon, bgTraingle } from '../../assets/assets'
+import { gameThings, bgPentagon, bgTriangle } from '../../assets/assets'
 
 type Props = {
   isGameModified: boolean | undefined
@@ -64,14 +64,14 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
     <>
       <div id='player-chooses'>
         <div className={`${gameState === 5 && winner === 'player' ? 'winner' : ''}`}></div>
-        <img id='bg-img' src={isGameModified ? bgPentagon : bgTraingle} alt={isGameModified ? 'bgPentagon' : 'bgTraingle'} />
+        <img id='bg-img' src={isGameModified ? bgPentagon : bgTriangle} alt={isGameModified ? 'bgPentagon' : 'bgTriangle'} />
         {gameThings.map((i, index) => {
           if (!isGameModified) {
             if (index < 3) {
               return (
                 <div
                   key={index}
-                  className={`item item-${index} ${index === playerChoice ? 'choosen' : ''} `}
+                  className={`item item-${index} ${index === playerChoice ? 'chosen' : ''} `}
                   onClick={() => {
                     playerChooseFunc(index)
                   }}
@@ -86,7 +86,7 @@ const MainGame: React.FC<Props> = ({ isGameModified, points, setPoints, gameStat
             return (
               <div
                 key={index}
-                className={`item item-${index} ${index === playerChoice ? 'choosen' : ''}`}
+                className={`item item-${index} ${index === playerChoice ? 'chosen' : ''}`}
                 onClick={() => {
                   playerChooseFunc(index)
                 }}

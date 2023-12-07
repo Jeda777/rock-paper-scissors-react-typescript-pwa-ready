@@ -1,5 +1,5 @@
 import bgPentagon from './bg-pentagon.svg'
-import bgTraingle from './bg-triangle.svg'
+import bgTriangle from './bg-triangle.svg'
 import iconClose from './icon-close.svg'
 import iconLizard from './icon-lizard.svg'
 import iconPaper from './icon-paper.svg'
@@ -13,4 +13,4 @@ import logo from './logo.svg'
 
 const gameThings = [iconRock, iconPaper, iconScissors, iconLizard, iconSpock]
 
-export { bgPentagon, bgTraingle, iconClose, gameThings, imageRulesBonus, imageRules, logoBonus, logo }
+export { bgPentagon, bgTriangle, iconClose, gameThings, imageRulesBonus, imageRules, logoBonus, logo }

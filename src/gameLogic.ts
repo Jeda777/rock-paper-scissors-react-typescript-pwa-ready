@@ -23,11 +23,11 @@ const getAIChoice = (modified: boolean) => {
   return number
 }
 
-const whoIsWinner = (PlayerChoise: number, AIChoice: number) => {
-  if (PlayerChoise === AIChoice) {
+const whoIsWinner = (PlayerChoice: number, AIChoice: number) => {
+  if (PlayerChoice === AIChoice) {
     return 'draw'
   } else {
-    if (beating[PlayerChoise].includes(options[AIChoice])) {
+    if (beating[PlayerChoice].includes(options[AIChoice])) {
       return 'player'
     } else {
       return 'ai'
