@@ -11,10 +11,10 @@ const MainMenu: React.FC<Props> = ({ setGameState, setIsGameModified }) => {
   }
   return (
     <div id='main-menu-container'>
-      <button onClick={() => startGame(false)}>
+      <button data-testid='Button Classic Game' onClick={() => startGame(false)}>
         Rock <br /> Paper <br /> Scissors
       </button>
-      <button onClick={() => startGame(true)}>
+      <button data-testid='Button Modified Game' onClick={() => startGame(true)}>
         Rock <br /> Paper <br /> Scissors <br /> Lizard <br /> Spock
       </button>
     </div>
