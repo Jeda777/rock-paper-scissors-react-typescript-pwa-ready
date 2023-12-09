@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { MainMenu, Header, MainGame, Footer } from './components'
+import { logoBonus, logo } from './assets/assets'
 
 const App = () => {
   // 0-Menu 1-Hide Menu 2-Show Options 3-player chose 4-waiting 5-result
@@ -30,7 +31,7 @@ const App = () => {
   return (
     <div id={`state-${gameState}`} className={`app ${isGameModified ? 'modified' : ''}`}>
       <MainMenu setGameState={setGameState} setIsGameModified={setIsGameModified} />
-      <Header isGameModified={isGameModified} points={isGameModified ? modifiedPoints : originalPoints} />
+      <Header src={isGameModified ? logoBonus : logo} points={isGameModified ? modifiedPoints : originalPoints} />
       <MainGame
         isGameModified={isGameModified}
         points={isGameModified ? modifiedPoints : originalPoints}

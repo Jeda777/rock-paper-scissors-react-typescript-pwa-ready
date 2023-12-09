@@ -1,19 +1,19 @@
-import { logoBonus, logo } from '../../assets/assets'
-
 type Props = {
-  isGameModified: boolean | undefined
   points: number
+  src: string
 }
 
-const Header: React.FC<Props> = ({ isGameModified, points }) => {
+const Header: React.FC<Props> = ({ points, src }) => {
   return (
     <header id='points-container'>
       <div id='points-img-container'>
-        <img src={isGameModified ? logoBonus : logo} alt='' />
+        <img data-testid='Header Logo Img' src={src} alt='' />
       </div>
       <div id='score-container'>
         <p id='score'>Score</p>
-        <p id='points'>{points}</p>
+        <p id='points' data-testid='Points Text'>
+          {points}
+        </p>
       </div>
     </header>
   )
