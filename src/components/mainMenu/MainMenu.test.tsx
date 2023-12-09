@@ -4,8 +4,9 @@
 
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import App from './App'
 import userEvent from '@testing-library/user-event'
+
+import App from '../../App'
 
 describe('Main Menu', () => {
   describe('Button Classic Game', () => {
