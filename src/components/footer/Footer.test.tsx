@@ -2,21 +2,23 @@
  * @jest-environment jsdom
  */
 
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 
-import App from '../../App'
+import Footer from './Footer'
 
 describe('Footer', () => {
   describe('Rules Modal', () => {
     test('open button exists', () => {
-      render(<App />)
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
       const button = screen.getByTestId('Rules Button')
       expect(button).toBeInTheDocument()
     })
     test('button opens modal', async () => {
-      render(<App />)
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
       const user = userEvent.setup()
       const button = screen.getByTestId('Rules Button')
       user.click(button)
@@ -24,7 +26,8 @@ describe('Footer', () => {
       expect(modal).toBeInTheDocument()
     })
     test('close button exists', async () => {
-      render(<App />)
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
       const user = userEvent.setup()
       const button = screen.getByTestId('Rules Button')
       user.click(button)
@@ -32,7 +35,8 @@ describe('Footer', () => {
       expect(closeButton).toBeInTheDocument()
     })
     test('button closes modal', async () => {
-      render(<App />)
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
       const user = userEvent.setup()
       const button = screen.getByTestId('Rules Button')
       user.click(button)
@@ -44,9 +48,18 @@ describe('Footer', () => {
   })
   describe('Menu Button', () => {
     test('button exists', () => {
-      render(<App />)
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
       const button = screen.getByTestId('Menu Button')
       expect(button).toBeInTheDocument()
+    })
+    test('button works', async () => {
+      const gameStateH = jest.fn()
+      render(<Footer setGameState={gameStateH} isGameModified={false} />)
+      const user = userEvent.setup()
+      const button = screen.getByTestId('Menu Button')
+      await user.click(button)
+      expect(gameStateH).toHaveBeenCalledWith(0)
     })
   })
 })
