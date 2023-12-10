@@ -29,7 +29,7 @@ const App = () => {
   }, [modifiedPoints])
 
   return (
-    <div id={`state-${gameState}`} className={`app ${isGameModified ? 'modified' : ''}`}>
+    <div id={`state-${gameState}`} className={`app ${isGameModified ? 'modified' : ''}`} data-testid='App'>
       <MainMenu setGameState={setGameState} setIsGameModified={setIsGameModified} />
       <Header src={isGameModified ? logoBonus : logo} points={isGameModified ? modifiedPoints : originalPoints} />
       <MainGame

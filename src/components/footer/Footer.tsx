@@ -16,15 +16,19 @@ const Footer: React.FC<Props> = ({ setGameState, isGameModified }) => {
   return (
     <>
       <div id='game-footer'>
-        <button onClick={() => returnToMenu()}>Menu</button>
-        <button onClick={() => setRulesOpen(true)}>Rules</button>
+        <button data-testid='Menu Button' onClick={() => returnToMenu()}>
+          Menu
+        </button>
+        <button data-testid='Rules Button' onClick={() => setRulesOpen(true)}>
+          Rules
+        </button>
       </div>
       {rulesOpen ? (
-        <div id='game-rules'>
+        <div id='game-rules' data-testid='Rules Modal'>
           <div className='container'>
             <p>Rules</p>
             <img id='rules-img' src={isGameModified ? imageRulesBonus : imageRules} alt='' />
-            <img src={iconClose} alt='' id='close-btn' onClick={() => setRulesOpen(false)} />
+            <img src={iconClose} alt='' id='close-btn' data-testid='Rules Close Button' onClick={() => setRulesOpen(false)} />
           </div>
         </div>
       ) : (
